@@ -1,0 +1,55 @@
+.container {
+  line-height: 5rem;
+
+  h1 {
+    cursor: pointer;
+  }
+}
+
+.content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--padding-default);
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: center;
+  ul {
+    display: flex;
+    gap: 1.5rem;
+
+    list-style-type: none;
+
+    li {
+      a {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.endMenu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  svg {
+    cursor: pointer;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    font-size: 1.15rem;
+    cursor: pointer;
+  }
+}

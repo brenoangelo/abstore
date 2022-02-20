@@ -1,0 +1,25 @@
+.button {
+  height: 4.13rem;
+  width: 13.86rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+
+  font-size: 1.5rem;
+  color: var(--white);
+  background: var(--orange-500);
+  border: 2px solid var(--orange-500);
+
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: brightness(0.90);
+  }
+}
+
+.unfilled {
+  color: var(--orange-500);
+  background: transparent;
+}
