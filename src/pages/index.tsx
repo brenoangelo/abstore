@@ -5,6 +5,14 @@ import { BsCartPlus } from 'react-icons/bs'
 
 import styles from './home.module.scss'
 import { BoxProductCategory } from '../components/BoxProductCategory'
+import { BoxProduct } from '../components/BoxProduct'
+
+const productsMonthlyDeals = [
+  { img: '/assets/singo-maple.png', title: 'Singo maple', discount: 20, price: 1500000, url: '/singo-maple' },
+  { img: '/assets/singo-ebony.png', title: 'Singo ebony', discount: 20, price: 1500000, url: '/singo-ebony' },
+  { img: '/assets/rakai-ebony.png', title: 'Rakai ebony', discount: 15, price: 1280000, url: '/rakai-ebony' },
+  { img: '/assets/way-kambas-mini.png', title: 'Way kambas mini maple', discount: 10, price: 1280000, url: '/way-kambas-mini' }
+]
 
 export default function Home() {
   return (
@@ -44,6 +52,26 @@ export default function Home() {
             url="product2"
             img="assets/relogio.png"
           />
+        </div>
+      </section>
+
+      <section className={styles.monthlyDeals}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>
+            Monthly Deals
+          </h2>
+
+          {productsMonthlyDeals.map(product => (
+            <BoxProduct 
+              title={product.title}
+              url={product.url}
+              img={product.img}
+              discount={product.discount}
+              price={product.price}
+            />
+          ))}
+
+          
         </div>
       </section>
     </>

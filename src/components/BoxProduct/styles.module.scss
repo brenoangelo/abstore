@@ -1,0 +1,21 @@
+.box {
+  max-width: 255px;
+  max-height: 381px;
+  padding: 1.25rem;
+
+  background: var(--white);
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+
+  button {
+    height: 39px;
+    font-size: 1rem;
+  }
+
+  button:first-child {
+    max-width: 39px;
+  }
+}
