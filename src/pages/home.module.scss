@@ -1,3 +1,18 @@
+.sectionTitle {
+  font-size: 2.25rem;
+
+  &::after {
+    content: "";
+    display: block;
+
+    width: 8rem;
+    height: 1px;
+
+    margin-top: 10px;
+    background: var(--gray-800);
+  }
+}
+
 .banner {
   padding: 3rem 0 8.68rem;
 
@@ -49,4 +64,22 @@
 
 .category {
   padding-bottom: 5.75rem;
+}
+
+.monthlyDeals {
+  margin-bottom: 15rem;
+  
+  .container {
+    flex-direction: column;
+    
+    h2  {
+      margin-bottom: 5rem;
+      align-self: flex-start;
+    }
+
+    >div {
+      display: flex;
+      gap: 30px;
+    }
+  }
 }

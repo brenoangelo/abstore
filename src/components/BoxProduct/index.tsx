@@ -19,8 +19,10 @@ export function BoxProduct({img, discount, price, url, title}: BoxProductProps) 
     <div className={styles.box}>
       <img src={img} alt={title} />
       <h3>{title}</h3>
-      <small>{discount}% Off</small>
-      <small>{discount ? price : ''}</small>
+      <div>
+        <small>{discount}% Off</small>
+        <small>{discount ? price : ''}</small>
+      </div>
       <h4>{finalPrice}</h4>
 
       <div className={styles.buttons}>

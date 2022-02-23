@@ -61,17 +61,18 @@ export default function Home() {
             Monthly Deals
           </h2>
 
-          {productsMonthlyDeals.map(product => (
-            <BoxProduct 
-              title={product.title}
-              url={product.url}
-              img={product.img}
-              discount={product.discount}
-              price={product.price}
-            />
-          ))}
+          <div>
+            {productsMonthlyDeals.map(product => (
+              <BoxProduct 
+                title={product.title}
+                url={product.url}
+                img={product.img}
+                discount={product.discount}
+                price={product.price}
+              />
+            ))}
+          </div>
 
-          
         </div>
       </section>
     </>
