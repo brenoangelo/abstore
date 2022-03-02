@@ -17,6 +17,10 @@ export function BoxProduct({img, discount, price, url, title}: BoxProductProps) 
 
   const finalPrice = discount ? price - (price/100 * discount) : price
 
+  function addCart() {
+    /* CRIAR FUNÇÃO PARA ADD PRODUTO NO CARRINHO */
+  }
+
   return (
     <div className={styles.box}>
       <img src={img} alt={title} />

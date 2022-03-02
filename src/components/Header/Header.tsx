@@ -1,30 +1,42 @@
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 
-import { AiOutlineSearch, AiOutlineShopping } from 'react-icons/ai'
-import { CgProfile } from 'react-icons/cg'
+import { AiOutlineSearch, AiOutlineShopping } from 'react-icons/ai';
+import { CgProfile } from 'react-icons/cg';
 
-export function Header() {
+type HeaderProps = {
+  handleCartOpenModal: () => void;
+};
+
+export function Header({ handleCartOpenModal }: HeaderProps) {
   return (
     <header className={styles.container}>
       <div className={styles.content}>
-        <h1><a href="/">Ab Store</a></h1>
+        <h1>
+          <a href="/">Ab Store</a>
+        </h1>
         <nav className={styles.navMenu}>
           <ul>
-            <li><a href="/watches">Watches</a></li>
-            <li><a href="/eyewear">Eyewear</a></li>
-            <li><a href="/accessories">Accessories</a></li>
+            <li>
+              <a href="/watches">Watches</a>
+            </li>
+            <li>
+              <a href="/eyewear">Eyewear</a>
+            </li>
+            <li>
+              <a href="/accessories">Accessories</a>
+            </li>
           </ul>
         </nav>
 
         <div className={styles.endMenu}>
-          <AiOutlineSearch size={24}/>
+          <AiOutlineSearch size={24} />
           <div>
-            <CgProfile size={24}/>
+            <CgProfile size={24} />
             Log In
           </div>
-          <AiOutlineShopping size={24}/>
+          <AiOutlineShopping size={24} onClick={handleCartOpenModal}/>
         </div>
       </div>
     </header>
-  )
+  );
 }
