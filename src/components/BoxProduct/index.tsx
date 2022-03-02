@@ -3,6 +3,8 @@ import styles from './styles.module.scss'
 
 import { VscHeart } from 'react-icons/vsc'
 
+import { format } from '../../constants'
+
 type BoxProductProps = {
   img: string;
   discount?: number;
@@ -21,9 +23,9 @@ export function BoxProduct({img, discount, price, url, title}: BoxProductProps) 
       <h3>{title}</h3>
       <div>
         <small>{discount}% Off</small>
-        <small>{discount ? price : ''}</small>
+        <small>{discount ? format(price) : ''}</small>
       </div>
-      <h4>{finalPrice}</h4>
+      <h4>{format(finalPrice)}</h4>
 
       <div className={styles.buttons}>
         <Button isUnfilled>

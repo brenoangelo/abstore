@@ -1,3 +1,4 @@
+import { CartModal } from "../components/CartModal"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header/Header"
 
@@ -9,6 +10,7 @@ function MyApp({ Component, pageProps }) {
       <Header />
       <Component {...pageProps} />
       <Footer />
+      <CartModal />
     </>
   )
 }
