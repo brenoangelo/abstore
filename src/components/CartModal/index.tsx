@@ -12,7 +12,7 @@ type CartProducts = {
   title: string;
   price: number;
   discount: number;
-  image: string;
+  img: string;
   stock: number;
 };
 
@@ -42,7 +42,8 @@ export function CartModal({ handleClose }: CartModalProps) {
   const [cupom, setCupom] = useState<Cupom>({} as Cupom);
 
   useEffect(() => {
-    const priceTotal = cartProducts.reduce((acc, product) => {
+    console.log(cartProducts)
+    const priceTotal = cartProducts?.reduce((acc, product) => {
       acc += calcDiscount(product.price, product.discount);
 
       return acc;
@@ -69,7 +70,7 @@ export function CartModal({ handleClose }: CartModalProps) {
             cartProducts.map((product) => (
               <div className={styles.productWrapper}>
                 <div className={styles.productPhoto}>
-                  <img src={product.image} alt={product.title} />
+                  <img src={product.img} alt={product.title} />
                 </div>
 
                 <div className={styles.productInfo}>
@@ -84,6 +85,7 @@ export function CartModal({ handleClose }: CartModalProps) {
                   <Button>
                     <HiOutlinePlus size={16} />
                   </Button>
+                  <input type="number" min={1} defaultValue={1} disabled/>
                   <Button>
                     <HiOutlineMinus size={16} />
                   </Button>

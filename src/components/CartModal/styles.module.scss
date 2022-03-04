@@ -104,6 +104,24 @@
   align-items: flex-end;
   gap: 1.25rem;
 
+  input[type=number] {
+    line-height: 2rem;
+    width: 1rem;
+
+    font-size: 1.5rem;
+    color: #000;
+
+    border: 0;
+    text-align: center;
+
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
   > button {
     max-height: 2rem;
     max-width: 2rem;
